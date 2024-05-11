@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:get/get.dart';
 import 'package:vendor/common/app_style.dart';
 import 'package:vendor/common/app_text.dart';
 import 'package:vendor/constants/constants.dart';
+import 'package:vendor/views/food/food_page.dart';
 
 class FoodTile extends StatelessWidget {
   FoodTile({super.key, required this.food});
@@ -14,7 +16,9 @@ class FoodTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-        onTap: () {},
+        onTap: () {
+          Get.to(()=>const FoodPage());
+        },
         child: Stack(
           clipBehavior: Clip.hardEdge,
           children: [

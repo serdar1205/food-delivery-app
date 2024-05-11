@@ -14,7 +14,8 @@ class CustomTextWidget extends StatelessWidget {
       this.suffixIcon,
       this.validator,
       this.prefixIcon,
-      this.hintText});
+      this.hintText,
+        this.maxLines,});
 
   final TextInputType? keyboardType;
   final TextEditingController? controller;
@@ -24,6 +25,7 @@ class CustomTextWidget extends StatelessWidget {
   final Widget? prefixIcon;
   final String? Function(String?)? validator;
   final String? hintText;
+  final int? maxLines;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,7 +37,9 @@ class CustomTextWidget extends StatelessWidget {
       ),
       child: TextFormField(
         controller: controller,
+        maxLines: maxLines??1,
         keyboardType: keyboardType,
+        textInputAction: TextInputAction.done,
         onEditingComplete: onEditingComplete,
         obscureText: obscureText ?? false,
         cursorHeight: 20.h,

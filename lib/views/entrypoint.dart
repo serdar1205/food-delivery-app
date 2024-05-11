@@ -9,13 +9,15 @@ import 'package:vendor/views/home/home_page.dart';
 import 'package:vendor/views/profile/profile_page.dart';
 import 'package:vendor/views/search/search_page.dart';
 
+import 'auth/verification_page.dart';
+
 class MainScreen extends StatelessWidget {
   MainScreen({super.key});
 
   List pageList = [
     const HomePage(),
      SearchPage(),
-    const CartPage(),
+    VerificationPage(),// const CartPage(),
     const ProfilePage(),
   ];
 
